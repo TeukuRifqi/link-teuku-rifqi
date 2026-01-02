@@ -1,0 +1,494 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b3b3b3;
+}
+
+/* Section Logic */
+.content-section {
+    display: none;
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.hero-btns button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-play { background-color: #fff; color: #000; }
+.btn-info { background-color: rgba(109, 109, 110, 0.7); color: #fff; }
+
+/* Contact Form */
+.contact-box {
+    background: #141414;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+    text-align: center;
+}
+
+.contact-box h2 { color: #e50914; margin-bottom: 10px; }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #333;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #e50914;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- ANIMASI FADE IN (Sesuai Permintaan) --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section {
+    display: none;
+    padding: 120px 10%;
+    min-height: 100vh;
+}
+
+.content-section.active {
+    display: block !important;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* --- JUDUL SECTION --- */
+.section-title-red {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-red::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff2e63, #08d9d6); /* Gradasi Neon */
+    border-radius: 2px;
+}
+
+/* --- KARTU (CARD) PROYEK & MEDIA --- */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.media-card {
+    background: #16213e;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #ff2e63;
+    box-shadow: 0 15px 35px rgba(255, 46, 99, 0.2);
+}
+
+.media-placeholder img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: 0.4s;
+}
+
+.media-card:hover .media-placeholder img {
+    filter: grayscale(0%);
+}
+
+.media-info { padding: 25px; }
+.media-info h3 { color: #08d9d6; margin-bottom: 10px; } /* Warna Cyan Neon */
+.media-info p { color: #94a3b8; line-height: 1.6; }
+
+/* --- CONTACT BOX --- */
+.contact-box {
+    background: #16213e;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+input, textarea {
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, #ff2e63, #c026d3);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 0 20px rgba(255, 46, 99, 0.6);
+    transform: scale(1.02);
+}
+
+/* --- CONTACT FORM --- */
+.contact-box {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f1f5f9;
+}
+
+.btn-submit {
+    background: #4f46e5;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+/* Contact Form */
+.contact-box {
+    background: #141414;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+    text-align: center;
+}
+
+.contact-box h2 { color: #e50914; margin-bottom: 10px; }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #333;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #e50914;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Media Section Styles */
+.media-container {
+    padding: 20px 50px;
+}
+
+.section-title-red {
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.media-card {
+    background-color: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover {
+    transform: scale(1.05);
+}
+
+.media-placeholder img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.media-info {
+    padding: 15px;
+}
+
+.media-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.media-info p {
+    font-size: 0.85rem;
+    color: #b3b3b3;
+    line-height: 1.4;
+}
+
+/* Video Wrapper agar Responsif */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* Pastikan warna teks judul project merah seperti di gambar */
+.section-title-red {
+    color: #ff0000; /* Warna Merah Netflix */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+/* Pengaturan khusus untuk gambar project agar proporsinya pas */
+.media-card .media-placeholder img {
+    width: 100%;
+    height: 200px; /* Anda bisa sesuaikan tingginya */
+    object-fit: cover;
+    border-bottom: 2px solid #333; /* Garis pembatas tipis */
+}
+
+/* Efek saat card project disentuh kursor */
+.media-card:hover {
+    background-color: #222;
+    cursor: pointer;
+}
+/* --- PROFILE STYLES --- */
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header {
+    margin-bottom: 50px;
+}
+
+.profile-img-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, #ff2e63, #08d9d6); /* Border Gradasi */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0a0a12;
+}
+
+.profile-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.tagline {
+    color: #08d9d6;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* --- GRID DETAIL (Pendidikan, Hobby, Kontak) --- */
+.profile-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left; /* Teks di dalam kartu tetap rata kiri agar rapi */
+}
+
+.detail-card {
+    background: #16213e;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.detail-card:hover {
+    border-color: #ff2e63;
+    transform: translateY(-5px);
+}
+
+.detail-card h3 {
+    color: #ff2e63;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-card ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* Hobby Tags */
+.hobbies-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobbies-tags span {
+    background: rgba(8, 217, 214, 0.1);
+    color: #08d9d6;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(8, 217, 214, 0.3);
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff2e63;
+}
